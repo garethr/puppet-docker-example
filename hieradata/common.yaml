@@ -1,0 +1,18 @@
+---
+classes:
+  - apt
+  - locales
+  - ssh
+  - motd
+  - sudo
+  - timezone
+  - unattended_upgrades
+  - git
+  - ufw
+  - dnsmasq
+timezone::timezone: 'UTC'
+unattended_upgrades::autoremove: true
+consul::config_hash:
+  data_dir: '/opt/consul'
+  client_addr: '0.0.0.0'
+  bind_addr: "%{::ipaddress_eth1}"

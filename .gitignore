@@ -1,0 +1,4 @@
+.vagrant
+.tmp
+.bundle
+vendor/**/

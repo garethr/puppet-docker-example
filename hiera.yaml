@@ -1,0 +1,15 @@
+:hierarchy:
+  - "%{::hostname}"
+  - common
+:backends:
+  - yaml
+  - consul
+:yaml:
+  :datadir: '/vagrant/hieradata'
+
+:consul:
+  :host: 127.0.0.1
+  :port: 8500
+  :paths:
+    - /v1/catalog/service
+    - /v1/catalog/node
