@@ -21,10 +21,14 @@ do
   sudo ln -sf /usr/bin/${i}2.0 /usr/bin/${i}
 done
 
+# Required for installing signed packages
+sudo apt-get install debian-keyring debian-archive-keyring -y
+
 # Install language locale as without can
 # interfere with package installation
 sudo apt-get install language-pack-en -y
 
 # Install puppet/facter
 echo -e "----> ${green}Installing puppet${end}"
-sudo gem install puppet facter --no-ri --no-rdoc
+sudo gem install puppet -v 3.7.5 --no-ri --no-rdoc
+sudo gem install facter --no-ri --no-rdoc
