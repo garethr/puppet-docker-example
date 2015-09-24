@@ -83,3 +83,6 @@ DEPENDENCIES
   librarian-puppet
   puppet
   serverspec
+
+BUNDLED WITH
+   1.10.4
