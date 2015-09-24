@@ -7,6 +7,8 @@ advanced example using Puppet, Docker, Consul and Vagrant.
 
 ## Usage
 
+    bundle install
+    librarian-puppet init
     vagrant plugin install vagrant-hosts
     vagrant up --provider virtualbox
     vagrant provision
